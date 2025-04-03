@@ -1,0 +1,50 @@
+{
+    "info": {
+        "name": "IdentityServer Token Request",
+        "description": "A Postman collection to request a token from IdentityServer using Client Credentials grant type.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Token",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "grant_type",
+                            "value": "client_credentials",
+                            "type": "text"
+                        },
+                        {
+                            "key": "client_id",
+                            "value": "client",
+                            "type": "text"
+                        },
+                        {
+                            "key": "client_secret",
+                            "value": "secret",
+                            "type": "text"
+                        },
+                        {
+                            "key": "scope",
+                            "value": "api1",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "https://localhost:7108/connect/token",
+                    "protocol": "https",
+                    "host": ["localhost"],
+                    "port": "7108",
+                    "path": ["connect", "token"]
+                },
+                "description": "Request an access token from IdentityServer."
+            },
+            "response": []
+        }
+    ]
+}
