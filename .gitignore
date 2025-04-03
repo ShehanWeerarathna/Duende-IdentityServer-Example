@@ -1,3 +1,4 @@
 /OAuthServer.Api/bin
 /OAuthServer.Api/obj
 /.vs
+OAuthServer.Api/tempkey.jwk
